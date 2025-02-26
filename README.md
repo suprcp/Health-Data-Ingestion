@@ -41,38 +41,39 @@ With high scalability and real-time processing, this project is designed for han
    CREATE DATABASE health_data_db;
    ```
    
-### Install Redis and Start the Server
+### Backend Setup 
+1. Install Redis and Start the Server
     ```
     brew install redis
     redis-server
     ```
     
-### Clone the repository
+2. Clone the repository
    ```
    git clone https://github.com/suprcp/Health-Data-Ingestion.git
    ```
 
-### Navigate to the project directory
+3. Navigate to the project directory
    ```
    cd Health-Data-Ingestion
    ```
 
-### Create and activate a virtual environment
+4. Create and activate a virtual environment
    ```
    python -m venv venv_new
    source venv_new/bin/activate 
    ```
-### Install dependencies
+5. Install dependencies
    ```
    pip install -r requirements.txt
    ```
 
-### Modify .env based on your environment settings
+6. Modify .env based on your environment settings
 
-### Start the application
-```
-uvicorn app.main:app --reload
-```
+7. Start the application
+   ```
+   uvicorn app.main:app --reload
+   ```
 
 The application will be available at: http://localhost:8000
 
