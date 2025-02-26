@@ -39,7 +39,7 @@ With high scalability and real-time processing, this project is designed for han
    ```
    psql -U postgres template1;
    CREATE DATABASE health_data_db;
-   ```
+   
 ### Install Redis and Start the Server
 
 ```sh
@@ -51,7 +51,7 @@ brew install redis
 redis-server
 
 ### Clone the repository
-```
+
 git clone https://github.com/suprcp/Health-Data-Ingestion.git
 ```
 ### Navigate to the project directory 
