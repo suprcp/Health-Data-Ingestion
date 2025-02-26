@@ -91,7 +91,7 @@
       uvicorn app.main:app --reload
       ```
    
-   The application will be available at: http://localhost:8000
+      The application will be available at: http://localhost:8000
    
    ### API Endpoints
    
