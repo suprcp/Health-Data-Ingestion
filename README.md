@@ -17,13 +17,11 @@ With high scalability and real-time processing, this project is designed for han
 ---
 
 ## Tech Stack
-| Component      | Technology |
-|---------------|------------|
-| Backend       | FastAPI (Python) |
-| Real-time processing | Redis Streams |
-| Database      | PostgreSQL |
-| ORM          | SQLAlchemy |
-| Task processing | Multi-threading |
+- Backend: FastAPI (Python)
+- Real-time processing: Redis Streams
+- Database: PostgreSQL
+- ORM: SQLAlchemy
+- Task processing: Multi-threading
 
 ---
 
@@ -40,28 +38,67 @@ With high scalability and real-time processing, this project is designed for han
 2. Create a new database:
    ```
    psql -U postgres template1;
-   CREATE DATABASE task_management_db;
+   CREATE DATABASE health_data_db;
    ```
-# Install Redis and start the server
+### Install Redis and Start the Server
+
+```sh
+# Install Redis using package manager
+# On macOS (Homebrew)
+brew install redis
+
+# Start the Redis server
 redis-server
 
-# Clone the repository
-git clone 
-
-# Navigate to the project directory
+### Clone the repository
+```
+git clone https://github.com/suprcp/Health-Data-Ingestion.git
+```
+### Navigate to the project directory 
+```
 cd Health-Data-Ingestion
+```
 
-# Create and activate a virtual environment
+### Create and activate a virtual environment
+```
 python -m venv venv_new
 source venv_new/bin/activate 
+```
 
-# Install dependencies
+### Install dependencies
+```
 pip install -r requirements.txt
+```
+### Modify .env based on your environment settings
 
-# Copy the environment variables file
-cp .env.example .env
-# Modify .env based on your environment settings
-
-# Start the application
+### Start the application
+```
 uvicorn app.main:app --reload
+```
+The application will be available at: http://localhost:8000
+
+### API Endpoints
+
+- `POST /health-metrics/` – Add health data directly
+- `POST /health-metrics/stream/` – Stream health data via Redis
+- `GET /health-metrics/` – Get all health data
+- `GET /health-metrics/{user_id}` – Get health data for a specific user
+- `GET /metrics/aggregate` – GET /metrics/aggregate
+- `Check Redis Stream status` – GET /stream/status
+
+### Testing
+- Swagger UI
+- You can test all API endpoints via Swagger UI:http://localhost:8000/docs
+
+
+
+
+
+
+
+
+
+
+
+
 
