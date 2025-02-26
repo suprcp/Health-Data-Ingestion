@@ -39,42 +39,41 @@ With high scalability and real-time processing, this project is designed for han
    ```
    psql -U postgres template1;
    CREATE DATABASE health_data_db;
+   ```
    
 ### Install Redis and Start the Server
-
-```sh
-# Install Redis using package manager
-# On macOS (Homebrew)
-brew install redis
-
-# Start the Redis server
-redis-server
-
+    ```
+    brew install redis
+    redis-server
+    ```
+    
 ### Clone the repository
+   ```
+   git clone https://github.com/suprcp/Health-Data-Ingestion.git
+   ```
 
-git clone https://github.com/suprcp/Health-Data-Ingestion.git
-```
-### Navigate to the project directory 
-```
-cd Health-Data-Ingestion
-```
+### Navigate to the project directory
+   ```
+   cd Health-Data-Ingestion
+   ```
 
 ### Create and activate a virtual environment
-```
-python -m venv venv_new
-source venv_new/bin/activate 
-```
-
+   ```
+   python -m venv venv_new
+   source venv_new/bin/activate 
+   ```
 ### Install dependencies
-```
-pip install -r requirements.txt
-```
+   ```
+   pip install -r requirements.txt
+   ```
+
 ### Modify .env based on your environment settings
 
 ### Start the application
 ```
 uvicorn app.main:app --reload
 ```
+
 The application will be available at: http://localhost:8000
 
 ### API Endpoints
