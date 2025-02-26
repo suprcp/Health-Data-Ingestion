@@ -7,13 +7,14 @@ import random
 
 from .database import engine
 from .models import HealthMetric
+from .config import REDIS_HOST, REDIS_PORT, REDIS_DB
 
 logger = logging.getLogger(__name__)
 
 
 class HealthDataStream:
-    def __init__(self, host='localhost', port=6379, db=0):
-        self.redis_client = redis.Redis(host=host, port=port, db=db)
+    def __init__(self):
+        self.redis_client = redis.Redis(host=REDIS_HOST, port=REDIS_PORT, db=REDIS_DB)
         self.stream = 'health-data-stream'
         self.group = 'health-data-group'
         self.consumer = f"consumer-{int(time.time())}"

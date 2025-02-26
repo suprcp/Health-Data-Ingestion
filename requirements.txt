@@ -6,3 +6,4 @@ alembic
 celery
 redis
 pydantic
+python-dotenv

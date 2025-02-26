@@ -22,8 +22,18 @@ redis_processor = HealthDataStream()
 stream_processing_active = False
 stream_thread = None
 
-app = FastAPI(title="Health Data API")
+app = FastAPI(app = FastAPI(
+    title="Health Data API",
+    description="Real-time health data processing service",
+    version="0.1.0",
+    docs_url="/docs",
+    redoc_url="/redoc",
+    openapi_url="/openapi.json"
+))
 
+@app.get("/")
+def read_root():
+    return {"message": "Health Data API is running"}
 
 def start_stream():
     global stream_processing_active, stream_thread
