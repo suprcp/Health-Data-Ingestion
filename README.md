@@ -35,8 +35,33 @@ With high scalability and real-time processing, this project is designed for han
 
 ---
 
-## Installation and Setup
-
 ### Database Setup
-```sql
-CREATE DATABASE health_data_db;
+1. Install PostgreSQL following the [official documentation](https://www.postgresql.org/download/).
+2. Create a new database:
+   ```
+   psql -U postgres template1;
+   CREATE DATABASE task_management_db;
+   ```
+# Install Redis and start the server
+redis-server
+
+# Clone the repository
+git clone 
+
+# Navigate to the project directory
+cd Health-Data-Ingestion
+
+# Create and activate a virtual environment
+python -m venv venv_new
+source venv_new/bin/activate 
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Copy the environment variables file
+cp .env.example .env
+# Modify .env based on your environment settings
+
+# Start the application
+uvicorn app.main:app --reload
+
