@@ -4,3 +4,10 @@ env/
 .venv/
 *.venv
 __pycache__/
+
+.env
+*.env
+.env.local
+
+*.swp
+.DS_Store
